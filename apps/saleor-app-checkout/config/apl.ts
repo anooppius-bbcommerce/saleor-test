@@ -7,8 +7,8 @@ import { CheckoutVercelAPL } from "./checkoutVercelApl";
 const getAPL = () => {
   switch (process.env.APL) {
     case "upstash":
-      const UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL;
-      const UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+      const UPSTASH_REDIS_REST_URL = "https://eu1-cuddly-monitor-39069.upstash.io" || process.env.UPSTASH_REDIS_REST_URL;
+      const UPSTASH_REDIS_REST_TOKEN = "AZidASQgZTk0Mzk2OTEtMjY0ZS00NzExLWE2MjQtZTU4MTExZTVlZmE5M2UwNTIyYjBmZmEzNDc5ZWFhNTEyOGNiZDM3OTQ5ODI=" || process.env.UPSTASH_REDIS_REST_TOKEN;
 
       invariant(UPSTASH_REDIS_REST_URL, "Missing UPSTASH_REDIS_REST_URL!");
       invariant(UPSTASH_REDIS_REST_TOKEN, "Missing UPSTASH_REDIS_REST_TOKEN!");
